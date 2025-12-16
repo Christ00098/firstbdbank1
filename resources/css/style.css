@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #002366; /* Bank of UK navy */
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background: white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 18px;
+  max-width: 85%;
+  word-wrap: break-word;
+  line-height: 1.5;
+  position: relative;
+}
+
+.bot {
+  background: #e9ecef;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+.user {
+  background: #002366;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  margin-left: auto;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-section input {
+  padding: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.login-section input:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 35, 102, 0.1);
+}
+
+.login-section button {
+  padding: 14px;
+  background: #002366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.login-section button:hover {
+  background: #00194c;
+}
+
+.voice-controls {
+  text-align: center;
+}
+
+.mic-btn {
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+}
+
+.mic-btn:hover {
+  background: #003d82;
+  transform: scale(1.02);
+}
+
+.mic-btn.listening {
+  background: #d32f2f;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(211, 47, 47, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6c757d;
+  min-height: 22px;
+  font-weight: 500;
+}
+
+.status::before {
+  margin-right: 6px;
+}
+
+.listening #status::before { content: "ðŸ—£ï¸"; color: #d32f2f; }
+.thinking #status::before { content: "ðŸ§ "; color: #f57c00; }
+.speaking #status::before { content: "ðŸ”Š"; color: #388e3c; }
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+#userInput {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#userInput:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.input-area button {
+  padding: 14px 20px;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
